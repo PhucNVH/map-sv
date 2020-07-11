@@ -1,0 +1,9 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "python.pythonPath": "/usr/bin/python3",
+    "appService.defaultWebAppToDeploy": "/subscriptions/f7a4ff56-e09c-4bd3-8dc9-bfb61a6756c6/resourceGroups/dadnmap/providers/Microsoft.Web/sites/dadn-map",
+    "appService.deploySubpath": "."
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>control Light</title>
+  </head>
+  <body>
+    <h2>Control Light</h2>
+    <form
+      action="controlLight"
+      method="POST"
+      enctype="application/x-www-form-urlencoded"
+    >
+      <div>
+        <label for="device_id">Choose a device:</label>
+        <select name="device_id" id="device_id">
+          <option value="Light">Light</option>
+          <option value="LightD">LightD</option>
+          <option value="Light1">Light1</option>
+          <option value="Light2">Light2</option>
+        </select>
+      </div>
+      <div>
+        <label for="selfdestruct">State:</label>
+        <input type="checkbox" id="selfdestruct" name="selfdestruct" />
+        <input type="hidden" value="0" id="state" name="state" />
+      </div>
+      <div>
+        <label for="brightness"
+          >Brightness (between 0 and 255): <span id="val">0</span>
+        </label>
+        <input
+          style="margin-left: 20px;"
+          type="range"
+          id="brightness"
+          name="brightness"
+          min="0"
+          max="255"
+          oninput="showVal(this.value)"
+        />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+  <script>
+    function showVal(val) {
+      console.log(val);
+      document.getElementById('val').innerText = val;
+    }
+    function changeCheckBox(ref) {
+      console.log(ref);
+    }
+  </script>
+</html>
